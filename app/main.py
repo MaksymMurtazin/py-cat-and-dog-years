@@ -22,6 +22,9 @@ def get_human_age(cat_age: int, dog_age: int) -> list:
     # Write your tests first, then implement the logic
     pets_age = [cat_age, dog_age]
     converted_age = [0, 0]
+    if cat_age < 0 or dog_age < 0:
+        raise TypeError("cat_age and dog_age must be int")
+
     for i in range(len(pets_age)):
         if pets_age[i] == 1:
             converted_age[i] = 15
